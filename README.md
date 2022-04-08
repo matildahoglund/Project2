@@ -2,11 +2,14 @@
 
 ## Members of the group
 -- Replace with student information --
-* Adam Svensson adv@bth.se
-* Albin Persson alo@bth.se
+* Matilda Höglund
+* Emma Ryefalk
+* Johannes Nordborg
+* Emanuel Gottfridsson
+* Adam Hallen
 
 ## Project Description
--- Place a short description of the project so that the reader know what the goal of the repository is --
+This is Project2, we will be working with warehouse automatization.
 
 ## User stories
 -- Extend the list with user stories. Also use the marking method for complete and incomplete user stories --
