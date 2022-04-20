@@ -16,11 +16,12 @@ def checking_color(port):
     lift_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,36])
     """ A positive speed value should make the motor move clockwise. """
 
-def driving(Port):
-    left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-    rigt_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-    nonne = DriveBase(left_motor, right_motor, wheel diameter = 47, axle_track = 128)
-    return 
+
+left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
+right_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
+nonne = DriveBase(left_motor, right_motor, wheel diameter = 47, axle_track = 128)
+
+
      
 def main():
     bobbe.straight(100) """ 100 är i millimeter"""
