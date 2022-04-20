@@ -4,7 +4,7 @@ import __init__
 
 from pybrick.evdevices import Motor, colorsensor
 from pbricks.parameters import port,direction,stop
-from pythbticks.tools Import wait
+from pythbticks.tools import wait
 from pybticks.robotics import DriveBase
 
 def checking_sensor(port):
@@ -57,10 +57,6 @@ def sensor(port):
         robot.drive(DRIVE_SPEED, turn_rate)
         # You can wait for a short time or do other things in this loop.
         wait(10)
-
-
-def main():
-    return 0
 
 if __name__ == '__main__':
     sys.exit(main())
