@@ -24,8 +24,12 @@ left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,
 right_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
 bobbe = DriveBase(left_motor, right_motor, wheel diameter = 47, axle_track = 128)
 
+<<<<<<< Updated upstream
 
      
+=======
+bobbe = DriveBase( left_motor, right_motor, wheel diameter = 47, axle_track = 128)  
+>>>>>>> Stashed changes
 def main():
     bobbe.straight(100) """ 100 är i millimeter"""
     return 0
