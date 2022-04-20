@@ -19,11 +19,12 @@ def checking_color(port):
 def driving(Port):
     left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
     rigt_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-    nonne = DriveBase(left_motor, right_motor, wheel diameter = 47, axle_track = 128)
+    nonne = DriveBase(left_motor, right_motor, wheel_diameter = 47, axle_track = 128)
     return 
-     
+    
 def main():
-    bobbe.straight(100) """ 100 är i millimeter"""
+    """ 100 är i millimeter"""
+    bobbe.straight(100)
     return 0
 
 def sensor(port):
@@ -58,7 +59,8 @@ def sensor(port):
         # You can wait for a short time or do other things in this loop.
         wait(10)
 
+"""titta om sensor är påslagen"""
 if __name__ == '__main__':
     sys.exit(main())
-    Touchsensors(port) """titta om sensor är påslagen"""
+    Touchsensors(port)
     checking_color(port)
