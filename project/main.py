@@ -18,8 +18,8 @@ def checking_color(port):
 
 def driving(Port):
     left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-    rigt_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-    nonne = DriveBase(left_motor, right_motor, wheel_diameter = 47, axle_track = 128)
+    right_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
+    bobbe = DriveBase(left_motor, right_motor, wheel_diameter = 47, axle_track = 128)
     return 
     
 def main():
