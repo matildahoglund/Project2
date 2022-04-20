@@ -7,6 +7,11 @@ from pbricks.parameters import port,direction,stop
 from pythbticks.tools import wait
 from pybticks.robotics import DriveBase
 
+
+left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
+right_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
+bobbe = DriveBase(left_motor, right_motor, wheel_diameter = 47, axle_track = 128)
+
 def checking_sensor(port):
     port = TouchSensor(port)
     return  pressed(port)
@@ -15,12 +20,6 @@ def checking_color(port):
     return color(port) 
     lift_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,36])
     """ A positive speed value should make the motor move clockwise. """
-
-def driving(Port):
-    left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-    right_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-    bobbe = DriveBase(left_motor, right_motor, wheel_diameter = 47, axle_track = 128)
-    return 
     
 def main():
     """ 100 är i millimeter"""
