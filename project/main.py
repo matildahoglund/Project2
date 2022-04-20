@@ -7,6 +7,9 @@ from pbricks.parameters import port,direction,stop
 from pythbticks.tools Import wait
 from pybticks.robotics import DriveBase
 
+# Initialize the EV3 brick.
+ev3 = EV3Brick()
+
 def checking_sensor(port):
     port = TouchSensor(port)
     return  pressed(port)
@@ -19,7 +22,7 @@ def checking_color(port):
 
 left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
 right_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-nonne = DriveBase(left_motor, right_motor, wheel diameter = 47, axle_track = 128)
+bobbe = DriveBase(left_motor, right_motor, wheel diameter = 47, axle_track = 128)
 
 
      
