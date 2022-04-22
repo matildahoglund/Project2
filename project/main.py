@@ -4,11 +4,13 @@ import __init__
 
 from pybrick.evdevices import Motor, colorsensor
 from pbricks.parameters import port,direction,stop
-from pythbticks.tools Import wait
+from pythbticks.tools import wait
 from pybticks.robotics import DriveBase
 
-# Initialize the EV3 brick.
-ev3 = EV3Brick()
+
+left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
+right_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
+bobbe = DriveBase(left_motor, right_motor, wheel_diameter = 47, axle_track = 128)
 
 def checking_sensor(port):
     port = TouchSensor(port)
@@ -18,22 +20,27 @@ def checking_color(port):
     return color(port) 
     lift_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,36])
     """ A positive speed value should make the motor move clockwise. """
-
-
-left_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-right_motor = Motor(Port.B, positive_direction-Direction.CLOCKWISE, gears = [ 12,20])
-bobbe = DriveBase(left_motor, right_motor, wheel diameter = 47, axle_track = 128)
-
-<<<<<<< Updated upstream
-
-     
-=======
-bobbe = DriveBase( left_motor, right_motor, wheel diameter = 47, axle_track = 128)  
->>>>>>> Stashed changes
+    
 def main():
-    bobbe.straight(100) """ 100 är i millimeter"""
+    """ 100 är i millimeter"""
+    bobbe.straight(100)
     return 0
 
+def sensor_two(port):
+    ev3 = EV3Brick()
+    left_motor = Motor(Port.B)
+    right_motor = MOtor(Port.C)
+    robot = DriveBase(left_motor, right_motor, wheel_diameter = 55.5, axle_track =104)
+    light = ColorSensor(Port.S2)
+    
+    while robot.distance() >= 1000:
+        correction = (3-light.reflection())*2
+        robot.drive(250,correction)
+    robot.stop()
+    left_motor.brake()
+    right_motor.brake()
+    
+    
 def sensor(port):
     # Initialize the motors.
     left_motor = Motor(Port.B)
@@ -64,13 +71,22 @@ def sensor(port):
         # Set the drive base speed and turn rate.
         robot.drive(DRIVE_SPEED, turn_rate)
         # You can wait for a short time or do other things in this loop.
-        wait(10)
+        wait(30)
 
 
-def main():
-    return 0
-
+"""titta om sensor är påslagen"""
 if __name__ == '__main__':
     sys.exit(main())
-    Touchsensors(port) """titta om sensor är påslagen"""
-    checking_color(port)
+    
+    
+Ok = true
+while not ok:
+    answer = Input("Vad vill du få roboten att göra..?")
+    if answer = 1: 
+        sensor(port)
+    elif answer = 2:
+        
+    elif answer = 3:
+        
+    elif answer = 4:
+    
