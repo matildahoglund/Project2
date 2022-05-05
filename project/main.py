@@ -64,7 +64,6 @@ def lower_forks(lift_motor):
  
 #lift when pressed#
 def lift_object(lift_motor, lift_forks, lower_forks):
-    
     lower_forks(lift_motor)
     while touch_sensor.pressed() != True:
         bobbe.straight(100)
@@ -72,4 +71,20 @@ def lift_object(lift_motor, lift_forks, lower_forks):
     
     return
 
-sensor()
+Color = {"Brown":[], "Green":[], "Red":[],"Blue":[]}
+
+
+def Checking_color(Color):
+    loop = True
+    while loop:
+        Colors = input("What color do you want to add?(If you are finish type x): ")
+        for key in Color.keys():
+            if key == Colors:
+                Color[key].append(light.rgb())
+        if Colors == "X":
+            loop = False
+            print("You have puted in all values")
+            return Color
+
+Checking_color(Color)
+print(Color)
