@@ -194,7 +194,7 @@ def Checking_color(Color):
 #En loop som sätter in rpg värde
 
 def color_function():
-    """ Denna funktionen ska hoppa in i conditionet om rpg är inom våra mätta intervall
+    """ Denna funktionen ska hoppa in i vårtconditionet om rpg är inom våra mätta intervall
     och så fort den går ut vårt färgintervall ska den antingen köra framåt i 4 sekunder
     sedan börja läsa av igen eller svänga 45 grader"""
     color = rgb()
@@ -243,9 +243,9 @@ def sensor_two(color):
     right_motor = Motor(Port.C)
     line_sensor = ColorSensor(Port.S3)
     robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
-    Color["Det värdet på rbg()"]
+    Colors = Color["Det värdet på rbg()"]
     WHITE = 85
-    threshold = (BLACK + WHITE) / 2
+    threshold = (Colors + WHITE) / 2
     DRIVE_SPEED = 100
     PROPORTIONAL_GAIN = 1.2
     while True:
