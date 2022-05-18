@@ -92,7 +92,26 @@ def Checking_color(Color):
             print("You have puted in all values")
             return Color
 
-<<<<<<< HEAD
+color = light.rgb()
+        
+Blue=(color[0]<13 and 13<color[1]<37 and 21<color[2]<78)
+            
+Yellow=(46<color[0]<52 and 34<color[1]<40 and 5<color[2])
+
+Brown=(13<color[0]<17 and 12<color[1]<16 and 6<color[2] <11)
+            
+Purple=(2<color[0]<13 and 1<color[1]<10 and 8<color[2]<33)
+
+Green=(5<color[0]<11 and 18<color[1]<35 and 4<color[2]<18)
+
+# def color_function(Drive_Color,drive_forward()):
+  
+#         robot.drive_time(500, -180, 2000)
+#         left_motor = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE, gears = [ 12,20])
+#         right_motor = Motor(Port.B, positive_direction=Direction.COUNTERCLOCKWISE, gears = [ 12,20])
+#         bobbe = DriveBase(left_motor, right_motor, wheel_diameter = 47, axle_track = 128) 
+#         color = light.rgb()
+<<<<<<< HEAD-
 <<<<<<< HEAD
 def color_function(sensor, lift_object):
     color = light.rgb()
