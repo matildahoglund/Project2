@@ -103,12 +103,19 @@ def color_function(sensor,turn(),drive_forward()):
         while 6<color[0]<12 and 14<color[1]<36 and 22<color[2]<77:
             our_color = "Blue"
             sensor()
-        turn()
+            color = light.rgb()
+        robot.drive_time(500, -180, 2000)
+        left_motor = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE, gears = [ 12,20])
+        right_motor = Motor(Port.B, positive_direction=Direction.COUNTERCLOCKWISE, gears = [ 12,20])
+        bobbe = DriveBase(left_motor, right_motor, wheel_diameter = 47, axle_track = 128) 
         color = light.rgb()
         
+         
         while 47<color[0]<51 and 35<color[1]<39 and 6<color[2]<8:
             our_color = "Yellow"
             sensor()
+            color = light.rgb()
+            
         
     
         while 14<color[0]<16 and 14<color[1]<15 and 8<color[2] <10:
