@@ -93,6 +93,7 @@ def Checking_color(Color):
             return Color
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 def color_function(sensor, lift_object):
     color = light.rgb()
     print(color)
@@ -145,6 +146,34 @@ def color_function(sensor,turn(),drive_forward()):
             sensor()
         
     
+=======
+def color_function(sensor,turn(),drive_forward()):
+    """ Denna funktionen ska hoppa in i vårtconditionet om rpg är inom våra mätta intervall
+    och så fort den går ut vårt färgintervall ska den antingen köra framåt i 4 sekunder
+    sedan börja läsa av igen eller svänga 45 grader"""
+    right_color = True 
+    while not right_color: 
+        color = light.rgb()
+        print(color)
+        while 6<color[0]<12 and 14<color[1]<36 and 22<color[2]<77:
+            our_color = "Blue"
+            sensor()
+            color = light.rgb()
+        robot.drive_time(500, -180, 2000)
+        left_motor = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE, gears = [ 12,20])
+        right_motor = Motor(Port.B, positive_direction=Direction.COUNTERCLOCKWISE, gears = [ 12,20])
+        bobbe = DriveBase(left_motor, right_motor, wheel_diameter = 47, axle_track = 128) 
+        color = light.rgb()
+        
+         
+        while 47<color[0]<51 and 35<color[1]<39 and 6<color[2]<8:
+            our_color = "Yellow"
+            sensor()
+            color = light.rgb()
+            
+        
+    
+>>>>>>> 2d2da59f47d1e68799e460cf34534d2a2cc5567a
         while 14<color[0]<16 and 14<color[1]<15 and 8<color[2] <10:
             our_color ="Brown"
             sensor()
@@ -162,4 +191,7 @@ def color_function(sensor,turn(),drive_forward()):
         return
 
 color_function(sensor)
+<<<<<<< HEAD
 >>>>>>> efc176cce7b70177d9b99787b891d2fb964e89ff
+=======
+>>>>>>> 2d2da59f47d1e68799e460cf34534d2a2cc5567a
